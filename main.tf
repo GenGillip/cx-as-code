@@ -1,7 +1,4 @@
-
-
 terraform {
-
   backend "remote" {
     organization = "thoughtmechanix"
 
@@ -12,7 +9,8 @@ terraform {
 
   required_providers {
     genesyscloud = {
-      source = "mypurecloud/genesyscloud"
+      source  = "mypurecloud/genesyscloud"
+      version = "~> 1.0.0"
     }
   }
 }
