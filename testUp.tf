@@ -64,7 +64,7 @@ resource "genesyscloud_routing_queue" "TestQueue1" {
     division_id              = "cf8293fa-1fd5-4fd4-a85d-659e4b937069"
     enable_manual_assignment = true
     enable_transcription     = false
-    #id                       = "27f14567-d563-4974-aa6b-20f7cab9669d"
+    id                       = "27f14567-d563-4974-aa6b-20f7cab9669d"
     members                  = [
         {
             ring_num = 1
