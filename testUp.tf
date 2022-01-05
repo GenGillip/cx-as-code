@@ -289,43 +289,43 @@ resource "genesyscloud_routing_queue" "TestQueue1" {
     ]
 
     media_settings_call {
-        alerting_timeout_sec      = 500
+        alerting_timeout_sec      = 700
         service_level_duration_ms = 20000
         service_level_percentage  = 0.8
     }
 
     media_settings_callback {
-        alerting_timeout_sec      = 30
+        alerting_timeout_sec      = 100
         service_level_duration_ms = 20000
         service_level_percentage  = 0.8
     }
 
     media_settings_chat {
-        alerting_timeout_sec      = 30
+        alerting_timeout_sec      = 100
         service_level_duration_ms = 20000
         service_level_percentage  = 0.8
     }
 
     media_settings_email {
-        alerting_timeout_sec      = 10
+        alerting_timeout_sec      = 100
         service_level_duration_ms = 86400000
         service_level_percentage  = 0.8
     }
 
     media_settings_message {
-        alerting_timeout_sec      = 10
+        alerting_timeout_sec      = 100
         service_level_duration_ms = 20000
         service_level_percentage  = 0.8
     }
 
     media_settings_social {
-        alerting_timeout_sec      = 300
+        alerting_timeout_sec      = 100
         service_level_duration_ms = 20000
         service_level_percentage  = 0.8
     }
 
     media_settings_video {
-        alerting_timeout_sec      = 8
+        alerting_timeout_sec      = 100
         service_level_duration_ms = 20000
         service_level_percentage  = 0.8
     }
