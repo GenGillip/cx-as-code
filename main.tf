@@ -34,7 +34,7 @@ provider "genesyscloud" {
 
 module "classifier_queues" {
   source                   = "./modules/queues"
-  classifier_queue_names   = ["401K", "IRA", "529", "GeneralSupport", "TechSupport"]
+  classifier_queue_names   = ["401K", "IRA", "529", "GeneralSupport", "TechSupport", "ACD01"]
   classifier_queue_members = []
 }
 
