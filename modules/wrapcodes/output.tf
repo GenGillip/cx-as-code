@@ -1,4 +1,4 @@
 
 output "wrapcode_ids" {
-  value = [genesyscloud_routing_wrapupcode.WrapCodes.id]
+  value = [genesyscloud_routing_wrapupcode.wrapcodes.id]
 }
