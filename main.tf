@@ -34,8 +34,27 @@ provider "genesyscloud" {
 
 module "classifier_queues" {
   source                   = "./modules/queues"
-  classifier_queue_names   = ["401K", "IRA", "529", "GeneralSupport", "TechSupport", "ACD01"]
+  classifier_queue_names   = [
+    "401K", 
+    "IRA", 
+    "529", 
+    "GeneralSupport", 
+    "TechSupport", 
+    "ACD01", 
+    "ADC24"
+  ]
   classifier_queue_members = []
+}
+
+module "classifier_wrapcodes" {
+  source = "./modules/wrapcodes"
+  classifier_wrapcode_names = [
+    "GenCodeApi_1", 
+    "GenCodeApi_2",
+    "GenCodeApi_3",
+    "GenCodeApi_4",
+    "GenCodeApi_5"
+  ]
 }
 
 

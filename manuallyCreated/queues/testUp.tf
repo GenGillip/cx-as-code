@@ -1,3 +1,13 @@
+
+terraform {
+  required_providers {
+    genesyscloud = {
+      source = "mypurecloud/genesyscloud"
+
+    }
+  }
+}
+
 # resource "genesyscloud_routing_queue" "ACD01" {
 #     acw_timeout_ms           = 0
 #     acw_wrapup_prompt        = "OPTIONAL"
