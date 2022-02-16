@@ -41,7 +41,8 @@ module "classifier_queues" {
     "GeneralSupport", 
     "TechSupport", 
     "ACD01", 
-    "ADC24"
+    "ADC24",
+    "TestQueue1234"
   ]
   classifier_queue_members = []
 }
