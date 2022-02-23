@@ -33,7 +33,9 @@ provider "genesyscloud" {
 
 module "classifier_queues" {
   source                   = "./modules/queues"
-  classifier_queue_names   = []
+  classifier_queue_names   = [
+    "Nexus_Terra_1"
+  ]
   classifier_queue_members = []
 }
 
@@ -42,10 +44,10 @@ module "classifier_wrapcodes" {
   classifier_wrapcode_names = []
 }
 
-module "classifier_roles" {
-  source                   = "./modules/roles"
+# module "classifier_roles" {
+#   source                   = "./modules/roles"
   
-}
+# }
 
 
 # module "classifier_email_routes" {
