@@ -1,12 +1,11 @@
 terraform {
-  backend "remote" {
-    organization = "genesys-gillip"
+  # backend "remote" {
+  #   organization = "genesys-gillip"
 
-    workspaces {
-      prefix = "cx-as-code"
-    }
-  }
-
+  #   workspaces {
+  #     prefix = "cx-as-code"
+  #   }
+  # }
   required_providers {
     genesyscloud = {
       source  = "mypurecloud/genesyscloud"

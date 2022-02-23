@@ -8,85 +8,13 @@ terraform {
   }
 }
 
-resource "genesyscloud_auth_role" "Wallboard_User_301965600" {
-  default_role_id = "wallboardUser"
-  description     = "Provides minimal permission to display a wallboard"
-  name            = "Wallboard User"
+resource "genesyscloud_auth_role" "Nexus_Admin_Role_1574057725" {
+  description = "Test API Role"
+  name        = "Nexus Admin Role"
   permission_policies {
-    action_set  = ["edit", "view"]
-    domain      = "analytics"
-    entity_name = "dashboardConfigurations"
-  }
-  permission_policies {
-    action_set  = ["search", "view"]
-    domain      = "architect"
-    entity_name = "flowOutcome"
-  }
-  permission_policies {
-    action_set  = ["view"]
-    domain      = "analytics"
-    entity_name = "conversationAggregate"
-  }
-  permission_policies {
-    domain      = "analytics"
-    entity_name = "conversationDetail"
-    action_set  = ["view"]
-  }
-  permission_policies {
-    action_set  = ["view"]
-    domain      = "analytics"
-    entity_name = "flowAggregate"
-  }
-  permission_policies {
-    action_set  = ["view"]
-    domain      = "analytics"
-    entity_name = "flowObservation"
-  }
-  permission_policies {
-    action_set  = ["view"]
-    domain      = "analytics"
-    entity_name = "queueObservation"
-  }
-  permission_policies {
-    action_set  = ["view"]
-    domain      = "architect"
-    entity_name = "flow"
-  }
-  permission_policies {
-    action_set  = ["view"]
-    domain      = "architect"
-    entity_name = "flowMilestone"
-  }
-  permission_policies {
-    entity_name = "user"
-    action_set  = ["view"]
-    domain      = "directory"
-  }
-  permission_policies {
-    domain      = "routing"
-    entity_name = "queue"
-    action_set  = ["view"]
-  }
-  permission_policies {
-    action_set  = ["view"]
-    domain      = "routing"
-    entity_name = "wrapupCode"
-  }
-  permission_policies {
-    entity_name = "realtimeAdherence"
-    action_set  = ["view"]
-    domain      = "wfm"
-  }
-}
-
-resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
-  default_role_id = "masterAdmin"
-  description     = "Administrator"
-  name            = "Master Admin"
-  permission_policies {
-    action_set  = ["*"]
     domain      = "acdscreenshare"
     entity_name = "*"
+    action_set  = ["*"]
   }
   permission_policies {
     action_set  = ["*"]
@@ -94,9 +22,9 @@ resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
     entity_name = "*"
   }
   permission_policies {
-    action_set  = ["*"]
     domain      = "alerting"
     entity_name = "*"
+    action_set  = ["*"]
   }
   permission_policies {
     action_set  = ["*"]
@@ -111,22 +39,22 @@ resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
   permission_policies {
     action_set  = ["*"]
     domain      = "attributes"
-    entity_name = "*"
+    entity_name = "attribute"
   }
   permission_policies {
+    action_set  = ["*"]
     domain      = "audits"
     entity_name = "*"
-    action_set  = ["*"]
   }
   permission_policies {
+    entity_name = "*"
     action_set  = ["*"]
     domain      = "authentication"
-    entity_name = "*"
   }
   permission_policies {
-    action_set  = ["*"]
     domain      = "authorization"
     entity_name = "*"
+    action_set  = ["*"]
   }
   permission_policies {
     action_set  = ["*"]
@@ -134,9 +62,9 @@ resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
     entity_name = "*"
   }
   permission_policies {
-    action_set  = ["*"]
     domain      = "bridge"
     entity_name = "*"
+    action_set  = ["*"]
   }
   permission_policies {
     action_set  = ["*"]
@@ -149,9 +77,9 @@ resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
     entity_name = "*"
   }
   permission_policies {
-    action_set  = ["*"]
     domain      = "cobrowse"
     entity_name = "*"
+    action_set  = ["*"]
   }
   permission_policies {
     action_set  = ["*"]
@@ -159,19 +87,44 @@ resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
     entity_name = "*"
   }
   permission_policies {
-    action_set  = ["*"]
-    domain      = "dialog"
     entity_name = "*"
+    action_set  = ["*"]
+    domain      = "directory"
+  }
+  permission_policies {
+    domain      = "directory"
+    entity_name = "fieldConfig"
+    action_set  = ["*"]
+  }
+  permission_policies {
+    entity_name = "group"
+    action_set  = ["*"]
+    domain      = "directory"
   }
   permission_policies {
     action_set  = ["*"]
     domain      = "directory"
-    entity_name = "*"
+    entity_name = "location"
   }
   permission_policies {
     action_set  = ["*"]
-    domain      = "gamification"
-    entity_name = "leaderboard"
+    domain      = "directory"
+    entity_name = "translations"
+  }
+  permission_policies {
+    action_set  = ["*"]
+    domain      = "directory"
+    entity_name = "user"
+  }
+  permission_policies {
+    entity_name = "*"
+    action_set  = ["*"]
+    domain      = "documents"
+  }
+  permission_policies {
+    action_set  = ["*"]
+    domain      = "externalContacts"
+    entity_name = "*"
   }
   permission_policies {
     entity_name = "*"
@@ -179,54 +132,34 @@ resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
     domain      = "gdpr"
   }
   permission_policies {
+    action_set  = ["*"]
+    domain      = "geolocation"
+    entity_name = "*"
+  }
+  permission_policies {
+    domain      = "integration"
+    entity_name = "*"
+    action_set  = ["*"]
+  }
+  permission_policies {
+    action_set  = ["*"]
     domain      = "integrations"
     entity_name = "*"
-    action_set  = ["*"]
   }
   permission_policies {
-    action_set  = ["*"]
-    domain      = "journey"
-    entity_name = "*"
-  }
-  permission_policies {
-    domain      = "knowledge"
-    entity_name = "*"
-    action_set  = ["*"]
-  }
-  permission_policies {
-    domain      = "languageUnderstanding"
-    entity_name = "*"
-    action_set  = ["*"]
-  }
-  permission_policies {
-    action_set  = ["*"]
-    domain      = "learning"
-    entity_name = "*"
-  }
-  permission_policies {
-    action_set  = ["*"]
-    domain      = "limits"
-    entity_name = "*"
-  }
-  permission_policies {
-    entity_name = "*"
     action_set  = ["*"]
     domain      = "messaging"
-  }
-  permission_policies {
-    action_set  = ["*"]
-    domain      = "mobile"
     entity_name = "*"
   }
   permission_policies {
+    action_set  = ["*"]
     domain      = "notifications"
     entity_name = "*"
-    action_set  = ["*"]
   }
   permission_policies {
+    action_set  = ["*"]
     domain      = "oauth"
     entity_name = "*"
-    action_set  = ["*"]
   }
   permission_policies {
     action_set  = ["*"]
@@ -244,14 +177,14 @@ resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
     entity_name = "*"
   }
   permission_policies {
+    action_set  = ["*"]
     domain      = "pushnotification"
     entity_name = "*"
-    action_set  = ["*"]
   }
   permission_policies {
-    action_set  = ["*"]
     domain      = "quality"
     entity_name = "*"
+    action_set  = ["*"]
   }
   permission_policies {
     action_set  = ["*"]
@@ -259,9 +192,9 @@ resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
     entity_name = "*"
   }
   permission_policies {
+    domain      = "reporting"
     entity_name = "*"
     action_set  = ["*"]
-    domain      = "reporting"
   }
   permission_policies {
     action_set  = ["*"]
@@ -274,54 +207,39 @@ resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
     entity_name = "*"
   }
   permission_policies {
+    entity_name = "*"
     action_set  = ["*"]
-    domain      = "routing"
-    entity_name = "message"
-  }
-  permission_policies {
     domain      = "scripter"
-    entity_name = "*"
-    action_set  = ["*"]
   }
   permission_policies {
-    entity_name = "*"
     action_set  = ["*"]
     domain      = "sms"
+    entity_name = "*"
   }
   permission_policies {
+    action_set  = ["*"]
     domain      = "speechAndTextAnalytics"
     entity_name = "*"
-    action_set  = ["*"]
   }
   permission_policies {
-    action_set  = ["*"]
     domain      = "sso"
     entity_name = "*"
+    action_set  = ["*"]
   }
   permission_policies {
-    action_set  = ["*"]
     domain      = "telephony"
     entity_name = "*"
+    action_set  = ["*"]
   }
   permission_policies {
-    entity_name = "*"
     action_set  = ["*"]
     domain      = "textbots"
+    entity_name = "*"
   }
   permission_policies {
+    action_set  = ["*"]
     domain      = "ui"
     entity_name = "*"
-    action_set  = ["*"]
-  }
-  permission_policies {
-    domain      = "uploads"
-    entity_name = "*"
-    action_set  = ["*"]
-  }
-  permission_policies {
-    domain      = "video"
-    entity_name = "*"
-    action_set  = ["*"]
   }
   permission_policies {
     action_set  = ["*"]
@@ -329,9 +247,9 @@ resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
     entity_name = "*"
   }
   permission_policies {
+    action_set  = ["*"]
     domain      = "voicemail"
     entity_name = "*"
-    action_set  = ["*"]
   }
   permission_policies {
     action_set  = ["*"]
@@ -349,34 +267,34 @@ resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
     entity_name = "*"
   }
   permission_policies {
+    action_set  = ["*"]
     domain      = "widgets"
     entity_name = "*"
-    action_set  = ["*"]
   }
   permission_policies {
-    domain      = "greetings"
-    entity_name = "greeting"
+    action_set  = ["add", "delete", "edit", "search", "view"]
+    domain      = "routing"
+    entity_name = "callRoute"
+  }
+  permission_policies {
+    action_set  = ["add", "delete", "edit", "search", "view"]
+    domain      = "routing"
+    entity_name = "emergencyGroup"
+  }
+  permission_policies {
+    action_set  = ["add", "delete", "edit", "search", "view"]
+    domain      = "routing"
+    entity_name = "schedule"
+  }
+  permission_policies {
+    domain      = "routing"
+    entity_name = "scheduleGroup"
+    action_set  = ["add", "delete", "edit", "search", "view"]
+  }
+  permission_policies {
+    domain      = "authorization"
+    entity_name = "grant"
     action_set  = ["add"]
-  }
-  permission_policies {
-    domain      = "greetings"
-    entity_name = "groupGreeting"
-    action_set  = ["add"]
-  }
-  permission_policies {
-    action_set  = ["add"]
-    domain      = "webDeployments"
-    entity_name = "configuration"
-  }
-  permission_policies {
-    domain      = "webDeployments"
-    entity_name = "deployment"
-    action_set  = ["add"]
-  }
-  permission_policies {
-    action_set  = ["associate"]
-    domain      = "externalContacts"
-    entity_name = "conversation"
   }
   permission_policies {
     domain      = "recording"
@@ -384,43 +302,34 @@ resource "genesyscloud_auth_role" "Master_Admin_2763240506" {
     action_set  = ["download"]
   }
   permission_policies {
+    domain      = "voicemail"
+    entity_name = "groupPolicy"
+    action_set  = ["edit", "view"]
+  }
+  permission_policies {
+    domain      = "presence"
+    entity_name = "userPresence"
+    action_set  = ["edit"]
+  }
+  permission_policies {
+    domain      = "coaching"
+    entity_name = "appointment"
+    action_set  = ["participate"]
+  }
+  permission_policies {
+    domain      = "learning"
+    entity_name = "assignment"
+    action_set  = ["participate"]
+  }
+  permission_policies {
     domain      = "routing"
     entity_name = "queue"
     action_set  = ["readonly"]
   }
   permission_policies {
-    action_set  = ["search"]
-    domain      = "architect"
-    entity_name = "datatable"
+    action_set  = ["view"]
+    domain      = "audits"
+    entity_name = "interactionDetails"
   }
-  permission_policies {
-    action_set  = ["search"]
-    domain      = "architect"
-    entity_name = "flowOutcome"
-  }
-  permission_policies {
-    action_set  = ["search"]
-    domain      = "routing"
-    entity_name = "callRoute"
-  }
-  permission_policies {
-    action_set  = ["search"]
-    domain      = "routing"
-    entity_name = "emergencyGroup"
-  }
-  permission_policies {
-    action_set  = ["search"]
-    domain      = "routing"
-    entity_name = "schedule"
-  }
-  permission_policies {
-    domain      = "routing"
-    entity_name = "scheduleGroup"
-    action_set  = ["search"]
-  }
-  permission_policies {
-    domain      = "gamification"
-    entity_name = "scorecard"
-    action_set  = ["view", "viewAll"]
-  }
+  permissions = ["admin", "architect_administration", "architect_editor", "architect_read_only", "content_management_admin", "content_management_user", "employee", "field_administration", "group_administration", "group_creation", "integration_config_administration", "location_administration", "location_contributor", "location_manager", "notification_administration", "notification_creation", "person_administration", "role_manager", "unified_communications", "user_administration", "user_manager"]
 }
