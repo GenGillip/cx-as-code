@@ -22,3 +22,7 @@ resource "genesyscloud_group" "nexus_group_1" {
     type   = ""
   }
 }
+
+data "genesyscloud_user" "jeremy_gillip" {
+  email = "jeremy.gillip@genesys.com"
+}
