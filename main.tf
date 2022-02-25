@@ -44,6 +44,10 @@ module "classifier_wrapcodes" {
   classifier_wrapcode_names = []
 }
 
+data "genesyscloud_user" "jeremy_gillip" {
+  email = "jeremy.gillip@genesys.com"
+}
+
 # module "classifier_roles" {
 #   source                   = "./modules/roles"
   
