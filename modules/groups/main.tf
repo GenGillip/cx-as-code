@@ -15,7 +15,7 @@ resource "genesyscloud_group" "nexus_group_1" {
   type          = "official"
   visibility    = "private"
   rules_visible = true
-  owner_ids     = [genesyscloud_user.jeremy_gillip.id]
+  owner_ids     = [data.genesyscloud_user.jeremy_gillip.id]
   member_ids    = []
   addresses {
     number = ""
