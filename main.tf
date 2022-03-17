@@ -48,8 +48,8 @@ module "classifier_groups" {
   source = "./modules/groups"
 }
 
-module "classifier_email_project" {
-  source = "./modules/email_project"
+module "classifier_emailproject" {
+  source = "./modules/emailproject"
 }
 
 
