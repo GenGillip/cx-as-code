@@ -42,10 +42,8 @@ data "genesyscloud_flow" "email_flow" {
 
 data "genesyscloud_routing_email_domain" "csp_email_domain" {
   name      = "csp.mypurecloud.com"
-  subdomain = false
 }
 
 data "genesyscloud_routing_email_domain" "genesyscsptesting_email_domain" {
   name      = "genesyscsptesting.mypurecloud.com"
-  subdomain = false
 }
