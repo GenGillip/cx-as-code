@@ -39,6 +39,10 @@ module "classifier_queues" {
   classifier_queue_members = []
 }
 
+module "classifier_adhoc_queues" {
+  source = "./modules/adhoc_queues"
+}
+
 module "classifier_wrapcodes" {
   source = "./modules/wrapcodes"
   classifier_wrapcode_names = []
