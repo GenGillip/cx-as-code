@@ -10,7 +10,7 @@ terraform {
 
 resource "genesyscloud_routing_queue" "nexuspoc_queue" {
   name                              = "Nexus POC Queue"
-  division_id                       = genesyscloud_auth_division.home.id
+  division_id                       = data.genesyscloud_auth_division.home.id
   description                       = "POC test via terraform"
   acw_wrapup_prompt                 = "MANDATORY_TIMEOUT"
   acw_timeout_ms                    = 400000
@@ -53,4 +53,8 @@ resource "genesyscloud_routing_queue" "nexuspoc_queue" {
 
 data "genesyscloud_flow" "inqueue-flow" {
   name = "JG Dev InQueue"
+}
+
+data "genesyscloud_auth_division" "home" {
+  name = "home"
 }
