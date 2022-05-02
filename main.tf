@@ -40,6 +40,10 @@ module "classifier_queues" {
   classifier_queue_members = []
 }
 
+module "classifier_audio_files" {
+  source = "./modules/audio_files"
+}
+
 module "classifier_adhoc_queues" {
   source = "./modules/adhoc_queues"
 }
