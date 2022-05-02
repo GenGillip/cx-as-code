@@ -34,7 +34,8 @@ provider "genesyscloud" {
 module "classifier_queues" {
   source                   = "./modules/queues"
   classifier_queue_names   = [
-    "Nexus_Terra_1"
+    "Nexus_Terra_1",
+    "Nexus_Terra_2"
   ]
   classifier_queue_members = []
 }
