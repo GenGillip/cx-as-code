@@ -16,3 +16,13 @@ resource "genesyscloud_architect_user_prompt" "welcome_greeting_1" {
     tts_string = "Good day. Thank you for calling."
   }
 }
+
+resource "genesyscloud_architect_user_prompt" "audio_2" {
+  name        = "Nexus_Message_2"
+  description = "Nexus_Message_2 Description"
+  resources {
+    language   = "en-us"
+    text       = ""
+    tts_string = ""
+  }
+}
