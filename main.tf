@@ -61,6 +61,10 @@ module "classifier_emailproject" {
   source = "./modules/emailproject"
 }
 
+module "classifier_divisions" {
+  source = "./modules/divisions"
+}
+
 
 
 # module "classifier_roles" {
