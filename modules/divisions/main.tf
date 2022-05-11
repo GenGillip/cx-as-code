@@ -7,8 +7,8 @@ terraform {
   }
 }
 
-resource "genesyscloud_auth_division" "nexus" {
-  name        = "Nexus"
+resource "genesyscloud_auth_division" "nexus_1" {
+  name        = "Nexus Test"
   description = "Custom Division for API testing"
 }
 
