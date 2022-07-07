@@ -47,10 +47,10 @@ resource "genesyscloud_routing_email_route" "nexustest_route" {
   #language_id  = genesyscloud_routing_language.english.id
   flow_id      = data.genesyscloud_flow.email_flow.id
   spam_flow_id = data.genesyscloud_flow.email_flow.id
-  reply_email_address {
-    domain_id = data.genesyscloud_routing_email_domain.csp_email_domain.id
-    #route_id  = "nexustest" #${genesyscloud_routing_email_route.nexustest_route.id}
-  }
+  # reply_email_address {
+  #   domain_id = data.genesyscloud_routing_email_domain.csp_email_domain.id
+  #   #route_id  = "${genesyscloud_routing_email_route.nexustest_route.id}"
+  # }
   # auto_bcc {
   #   name  = "Test Support"
   #   email = "support@test.example.com"
