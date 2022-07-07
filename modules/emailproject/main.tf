@@ -15,6 +15,13 @@ terraform {
 # command will fail if there is already have two email routes present.
 ###
 
+resource "genesyscloud_routing_email_route" "aphotline-rogers-com" {
+  domain_id    = data.genesyscloud_routing_email_domain.csp_email_domain.id
+  pattern      = "aphotline"
+  from_name    = "AP Hotline"
+  from_email   = "aphotline@csp.mypurecloud.com"
+}
+
 resource "genesyscloud_routing_email_route" "nexus_route" {
   domain_id    = data.genesyscloud_routing_email_domain.csp_email_domain.id
   pattern      = "nexus"
@@ -28,7 +35,7 @@ resource "genesyscloud_routing_email_route" "nexus_route" {
   spam_flow_id = data.genesyscloud_flow.email_flow.id
   reply_email_address {
     domain_id = data.genesyscloud_routing_email_domain.csp_email_domain.id
-    route_id  = "${genesyscloud_routing_email_route.nexustest_route.id}" #var.email-resource-id #genesyscloud_routing_email_route.nexus_route.id
+    route_id  = "${genesyscloud_routing_email_route.aphotline-rogers-com.id}" #var.email-resource-id #genesyscloud_routing_email_route.nexus_route.id
   }
   # auto_bcc {
   #   name  = "Test Support"
